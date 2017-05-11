@@ -5,8 +5,7 @@ public class User {
     private String lastname;
     private String middlename;
     private int birthday;
-    private String email;
-    private int phone;
+
 
     public User(int id, String firstname, String lastname, String middlename, int birthday, String email, int phone) {
 
@@ -41,17 +40,5 @@ public class User {
     }
     public int getBirthday() {
         return birthday;
-    }
-    public void setEmail() {
-        this.email=email;
-    }
-    public String getEmail() {
-        return email;
-    }
-    public void setPhone() {
-        this.phone=phone;
-    }
-    public int getPhone() {
-        return phone;
     }
 }
