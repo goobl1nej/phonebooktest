@@ -1,12 +1,24 @@
-public class Phone {
-    private int phone;
+import java.util.ArrayList;
 
-    public void setPhone() {
-        this.phone=phone;
+public class Phone{
+    String phone;
+    ArrayList<String> ph = new ArrayList<>();
+    public Phone (String phone) {
+//        this.phone = phone;
+        ph.add("+7(855) 645 1254");
+        ph.add("+7(847) 325 1647");
     }
-    public int getPhone() {
-        return phone;
+
+    public void setPhone(){
+        ph.add(this.phone=phone);
     }
-    public static void main(String[] args) {
+    public ArrayList<String> getPhone(){
+        return ph;
     }
+
+
+
+
+//    public void setPhone() {phone.add();}
+//    public List<Phone> getPhone() {return phone;}
 }

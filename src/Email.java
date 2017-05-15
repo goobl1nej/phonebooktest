@@ -1,9 +1,24 @@
+import java.util.ArrayList;
+
 public class Email {
     private String email;
-    public void setEmail() {
-        this.email=email;
+    ArrayList<String> em = new ArrayList();
+    Email(String email){
+//        this.email=email;
+        em.add("Petrovich@po.hui");
+        em.add("Petrovich@na.hui");
     }
-    public String getEmail() {
-        return email;
+
+    public void setEmail(){
+        em.add(this.email=email);
     }
+    public ArrayList<String> getEmail(){
+        return em;
+    }
+
+
+
+//    List<Email> email = new ArrayList<>()
+//    public void setEmail() {this.email=email;}
+//    public List<Email> getEmail() {return email;}
 }

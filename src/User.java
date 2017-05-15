@@ -1,16 +1,22 @@
+import java.util.ArrayList;
+
 public class User {
 
     private int id;
     private String firstname;
     private String lastname;
     private String middlename;
-    private int birthday;
+    private String birthday;
+    private ArrayList<String> email;
 
-
-    public User(int id, String firstname, String lastname, String middlename, int birthday, String email, int phone) {
-
+   public User(int id, String firstname, String lastname, String middlename, String birthday) {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.middlename = middlename;
+        this.birthday = birthday;
+        this.email=new Email();
     }
-
     public void setId() {
         this.id=id;
     }
@@ -38,7 +44,20 @@ public class User {
     public void setBirthday() {
         this.birthday=birthday;
     }
-    public int getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
+//    public void setEmail() {
+//        this.email=email;
+//    }
+//    public String getEmail() {
+//        return email;
+//    }
+//    public void setPhone() {
+//        this.phone=phone;
+//    }
+//    public int getPhone() {
+//        return phone;
+//    }
+
 }
