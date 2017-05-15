@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class User {
 
@@ -7,15 +8,28 @@ public class User {
     private String lastname;
     private String middlename;
     private String birthday;
-    private ArrayList<String> email;
+    private List<Email> emails;
+    private List<Phone> phones;
 
-   public User(int id, String firstname, String lastname, String middlename, String birthday) {
+    public User() {
+    }
+
+    public User(int id, String firstname, String lastname, String middlename, String birthday) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
         this.middlename = middlename;
         this.birthday = birthday;
-        this.email=new Email();
+    }
+
+    public User(int id, String firstname, String lastname, String middlename, String birthday, List<Email> emails, List<Phone> phones) {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.middlename = middlename;
+        this.birthday = birthday;
+        this.emails= emails;
+        this.phones= phones;
     }
     public void setId() {
         this.id=id;
@@ -47,17 +61,33 @@ public class User {
     public String getBirthday() {
         return birthday;
     }
-//    public void setEmail() {
-//        this.email=email;
-//    }
-//    public String getEmail() {
-//        return email;
-//    }
-//    public void setPhone() {
-//        this.phone=phone;
-//    }
-//    public int getPhone() {
-//        return phone;
-//    }
 
+    public List<Email> getEmails() {
+        return emails;
+    }
+
+    public void setEmails(List<Email> emails) {
+        this.emails = emails;
+    }
+
+    public List<Phone> getPhones() {
+        return phones;
+    }
+
+    public void setPhones(List<Phone> phones) {
+        this.phones = phones;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", middlename='" + middlename + '\'' +
+                ", birthday='" + birthday + '\'' +
+                ", emails=" + emails +
+                ", phones=" + phones +
+                '}';
+    }
 }

@@ -1,24 +1,38 @@
 import java.util.ArrayList;
 
 public class Email {
+    private long emailId;
     private String email;
-    ArrayList<String> em = new ArrayList();
-    Email(String email){
-//        this.email=email;
-        em.add("Petrovich@po.hui");
-        em.add("Petrovich@na.hui");
+
+
+    public Email() {
     }
 
-    public void setEmail(){
-        em.add(this.email=email);
-    }
-    public ArrayList<String> getEmail(){
-        return em;
+    public Email(String email) {
+        this.email = email;
     }
 
+    public long getEmailId() {
+        return emailId;
+    }
 
+    public void setEmailId(long emailId) {
+        this.emailId = emailId;
+    }
 
-//    List<Email> email = new ArrayList<>()
-//    public void setEmail() {this.email=email;}
-//    public List<Email> getEmail() {return email;}
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Email{" +
+                "emailId=" + emailId +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }
