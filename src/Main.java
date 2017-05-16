@@ -13,7 +13,7 @@ public class Main {
 //        printPhonebook(users);
         printPhonebook(userList);
     }
-
+//хуй
     private static List<User> loadFromDB() {
         List<User> userList=new ArrayList<>();
         List<Email> userEmail=new ArrayList<>();
