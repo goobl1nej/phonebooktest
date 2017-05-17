@@ -1,24 +1,23 @@
 import java.util.ArrayList;
 
 public class Email {
-    private long emailId;
+    private long id;
     private String email;
 
 
     public Email() {
     }
 
+    public Email(long id, String email) {
+        this.id = id;
+        this.email = email;
+    }
+
     public Email(String email) {
         this.email = email;
     }
 
-    public long getEmailId() {
-        return emailId;
-    }
 
-    public void setEmailId(long emailId) {
-        this.emailId = emailId;
-    }
 
     public String getEmail() {
         return email;
@@ -28,10 +27,18 @@ public class Email {
         this.email = email;
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "Email{" +
-                "emailId=" + emailId +
+                "id=" + id +
                 ", email='" + email + '\'' +
                 '}';
     }

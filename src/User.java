@@ -4,7 +4,7 @@ import java.util.List;
 
 public class User {
 
-    private int id;
+    private long id;
     private String firstname;
     private String lastname;
     private String middlename;
@@ -15,7 +15,7 @@ public class User {
     public User() {
     }
 
-    public User(int id, String firstname, String lastname, String middlename, Date birthday) {
+    public User(long id, String firstname, String lastname, String middlename, Date birthday) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -23,7 +23,7 @@ public class User {
         this.birthday = birthday;
     }
 
-    public User(int id, String firstname, String lastname, String middlename, Date birthday, List<Email> emails, List<Phone> phones) {
+    public User(long id, String firstname, String lastname, String middlename, Date birthday, List<Email> emails, List<Phone> phones) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -35,7 +35,7 @@ public class User {
     public void setId() {
         this.id=id;
     }
-    public int getId() {
+    public long getId() {
         return id;
     }
     public void setFirstname() {

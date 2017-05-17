@@ -1,13 +1,27 @@
 import java.util.ArrayList;
 
 public class Phone{
+    private long id;
     private String phone;
 
     public Phone() {
     }
 
+    public Phone(long id, String phone) {
+        this.id = id;
+        this.phone = phone;
+    }
+
     public Phone(String phone) {
         this.phone = phone;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getPhone() {
@@ -21,7 +35,8 @@ public class Phone{
     @Override
     public String toString() {
         return "Phone{" +
-                "phone='" + phone + '\'' +
+                "id=" + id +
+                ", phone='" + phone + '\'' +
                 '}';
     }
 }
