@@ -32,7 +32,7 @@ public class User {
         this.emails= emails;
         this.phones= phones;
     }
-    public void setId() {
+    public void setId(long userID) {
         this.id=id;
     }
     public long getId() {
