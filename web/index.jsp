@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: root
@@ -11,13 +12,13 @@
     <title>Контакт</title>
   </head>
   <body>
+  <form action="<c:url value="/phonebook"/>" method="POST">
     <table>
       <tr>
-        <td><input type="submit" value="Add" name="Add"></td>
-        <td><input type="submit" value="Edit" name="Edit"></td>
-        <td><a href="phonebook?action=All">All</a></td>
-        <td><input type="submit" value="Delete" name="Delete"></td>
+        <td><a href="phonebook?action=add">Add</a></td>
+        <td><a href="phonebook?action=all">All</a></td>
       </tr>
     </table>
+  </form>
   </body>
 </html>

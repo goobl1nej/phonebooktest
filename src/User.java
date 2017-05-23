@@ -9,10 +9,28 @@ public class User {
     private String lastname;
     private String middlename;
     private Date birthday;
+    private String email;
+    private String phone;
     private List<Email> emails;
     private List<Phone> phones;
 
     public User() {
+    }
+
+    public User(long id, String firstname, String lastname, String middlename, Date birthday, String email, String phone) {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.middlename = middlename;
+        this.birthday = birthday;
+        this.email= email;
+        this.phone= phone;
+    }
+
+    public User(String firstname, String lastname, String middlename) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.middlename = middlename;
     }
 
     public User(long id, String firstname, String lastname, String middlename, Date birthday) {
@@ -32,35 +50,61 @@ public class User {
         this.emails= emails;
         this.phones= phones;
     }
-    public void setId(long userID) {
-        this.id=id;
-    }
+
     public long getId() {
         return id;
     }
-    public void setFirstname() {
-        this.firstname=firstname;
+
+    public void setId(long id) {
+        this.id = id;
     }
+
     public String getFirstname() {
         return firstname;
     }
-    public void setLastname() {
-        this.lastname=lastname;
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
+
     public String getLastname() {
         return lastname;
     }
-    public void setMiddlename() {
-        this.middlename=middlename;
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
+
     public String getMiddlename() {
         return middlename;
     }
-    public void setBirthday() {
-        this.birthday=birthday;
+
+    public void setMiddlename(String middlename) {
+        this.middlename = middlename;
     }
+
     public Date getBirthday() {
         return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public List<Email> getEmails() {

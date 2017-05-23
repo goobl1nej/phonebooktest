@@ -12,7 +12,8 @@
     <title>Список пользователей</title>
 </head>
     <body>
-        <c:if test="${userList!=null}">
+    <form action="<c:url value="/edit"/>" method="POST">
+
         <c:forEach var="user" items="${userList}">
 
                 <input type="hidden" name="userID" value="${user.id}"/>
@@ -28,6 +29,8 @@
                     </tr>
                     <tr>
                         <td>Дата рождения:</td><td><input type="text" name="birthday" value="${user.birthday}"/></td>
+                        <td><a href="phonebook?action=edit">Редактировать пользователя</a></td>
+                        <td><a href="phonebook?action=delete&id=${user.id}">Удалить пользователя</a></td>
                     </tr>
                     <c:forEach var="email" items="${user.emails}">
                         <tr>
@@ -42,10 +45,14 @@
                 </table>
 
         </c:forEach>
-        </c:if>
+
         <c:if test="${userList==null}">
             Пользователей не найдено
             </c:if>
+    </form>
+    <tr>
+    <td><a href="phonebook?action=add">Add</a></td>
+    </tr>
 
     </body>
 </html>

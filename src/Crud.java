@@ -192,9 +192,23 @@ public class Crud {
         try {
             Class.forName("org.postgresql.Driver");
             connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
-            usersPS=connectiondb.prepareStatement("INSERT INTO user_"+"(lastname,firstname,middlename,birthday)" );
-            emailsOfUserPS=connectiondb.prepareStatement("DELETE * FROM email_ WHERE user_id=?");
-            phonesOfUserPS=connectiondb.prepareStatement("DELETE * FROM phone_ WHERE user_id=?");
+            usersPS=connectiondb.prepareStatement("INSERT INTO user_"+"(lastname,firstname,middlename,birthday)"+"VALUES (?,?,?,?)");
+            emailsOfUserPS=connectiondb.prepareStatement("INSERT INTO email_"+"(user_id,email)"+"VALUES (?,?)");
+            phonesOfUserPS=connectiondb.prepareStatement("INSERT INTO phone_"+"(user_id,phone)"+"VALUES (?,?)");
+            usersPS.setString(1, user.getLastname());
+            usersPS.setString(2, user.getFirstname());
+            usersPS.setString(3, user.getMiddlename());
+            usersPS.setDate(4, (java.sql.Date) user.getBirthday());
+            usersPS.execute();
+            PreparedStatement usersPSId=connectiondb.prepareStatement("select user_id from user_ order by user_id desc limit 1");
+            ResultSet s = usersPSId.executeQuery();
+            long id = s.getLong("user_id");;
+            emailsOfUserPS.setLong(1,id);
+            emailsOfUserPS.setString(2, user.getEmail());
+            emailsOfUserPS.execute();
+            phonesOfUserPS.setLong(1,id);
+            phonesOfUserPS.setString(2, user.getPhone());
+            phonesOfUserPS.execute();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
@@ -237,10 +251,15 @@ public class Crud {
         try {
             Class.forName("org.postgresql.Driver");
             connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
-            usersPS=connectiondb.prepareStatement("DELETE * FROM user_ WHERE userid=?");
-            emailsOfUserPS=connectiondb.prepareStatement("DELETE * FROM email_ WHERE user_id=?");
-            phonesOfUserPS=connectiondb.prepareStatement("DELETE * FROM phone_ WHERE user_id=?");
+            usersPS=connectiondb.prepareStatement("DELETE FROM user_ WHERE user_id=?");
+            emailsOfUserPS=connectiondb.prepareStatement("DELETE FROM email_ WHERE user_id=?");
+            phonesOfUserPS=connectiondb.prepareStatement("DELETE FROM phone_ WHERE user_id=?");
+            emailsOfUserPS.setLong(1,userID);
+            emailsOfUserPS.execute();
+            phonesOfUserPS.setLong(1,userID);
+            phonesOfUserPS.execute();
             usersPS.setLong(1,userID);
+            usersPS.execute();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {

@@ -9,22 +9,27 @@ import java.util.List;
 public class PhonebookServlet extends HttpServlet{
 
     protected void chooseToDo(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        if (req.getParameter("Add")!=null){
-
+//        if (req.getParameter("action")!=null && req.getParameter("action").equals("add")){
+        if (req.getParameter("action")!=null && req.getParameter("action").equals("add")){
+//            User insUser = new User();
+//            insUser.setId(0);
+//            req.setAttribute("user", insUser);
+            getServletContext().getRequestDispatcher("/EditUser.jsp").forward(req,resp);
         }
         if (req.getParameter("Edit")!=null){
 
         }
-        if (req.getParameter("action")!=null && req.getParameter("action").equals("All") ){
+        if (req.getParameter("action")!=null && req.getParameter("action").equals("all") ){
             List<User> userList=Crud.loadAll();
 
             req.setAttribute("userList", userList);
             getServletContext().getRequestDispatcher("/UsersView.jsp").forward(req,resp);
         }
-        if (req.getParameter("Delete")!=null){
-            if (req.getParameter("userID")!=null){
-                Long userID=(Long.parseLong(req.getParameter("userID")));
+        if (req.getParameter("action")!=null && req.getParameter("action").equals("delete")){
+            if (req.getParameter("id")!=null){
+                Long userID=(Long.parseLong(req.getParameter("id")));
                 Crud.deleteUser(userID);
+                req.getRequestDispatcher("/phonebook?action=all").forward(req, resp);
             }
 
         }
