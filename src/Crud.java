@@ -95,9 +95,9 @@ public class Crud {
         return userList;
     }
 
-    public static List<User> loadUserById(int userID){
+    public static User loadUserById(Long userID){
 //        List<User> userList=null;
-        User userOneId = null;
+        User user = null;
         Connection connectiondb =null;
         PreparedStatement usersPS=null;
         PreparedStatement emailsOfUserPS=null;
@@ -107,21 +107,21 @@ public class Crud {
         try {
             Class.forName("org.postgresql.Driver");
             connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
-            usersPS=connectiondb.prepareStatement("SELECT * FROM user_WHERE user_id=?");
+            usersPS=connectiondb.prepareStatement("SELECT * FROM user_ WHERE user_id=?");
             emailsOfUserPS=connectiondb.prepareStatement("SELECT * FROM email_ WHERE user_id=?");
             phonesOfUserPS=connectiondb.prepareStatement("SELECT * FROM phone_ WHERE user_id=?");
 
             usersPS.setLong(1,userID);
             ResultSet userset =usersPS.executeQuery();
             if(userset!=null) {
-                userOneId=new User();
+//                userOneId=new User();
                 while (userset.next()) {
                     long id = userset.getLong("user_id");
                     String lastname = userset.getString("lastname");
                     String firstname = userset.getString("firstname");
                     String middlename = userset.getString("middlename");
                     Date birthday = (userset.getDate("birthday"));
-                    User user=new User(id,firstname,lastname,middlename, birthday);
+                    user=new User(id,firstname,lastname,middlename, birthday);
                     emailsOfUserPS.setLong(1, user.getId());
                     ResultSet emailsRS=emailsOfUserPS.executeQuery();
                     if(emailsRS!=null) {
@@ -147,7 +147,6 @@ public class Crud {
                     }
 
                 }
-
             }
 
 
@@ -179,7 +178,7 @@ public class Crud {
         }
 
 
-        return (List<User>) userOneId;
+        return user;
     }
 
     public static void newUser(User user){
@@ -195,20 +194,22 @@ public class Crud {
             usersPS=connectiondb.prepareStatement("INSERT INTO user_"+"(lastname,firstname,middlename,birthday)"+"VALUES (?,?,?,?)");
             emailsOfUserPS=connectiondb.prepareStatement("INSERT INTO email_"+"(user_id,email)"+"VALUES (?,?)");
             phonesOfUserPS=connectiondb.prepareStatement("INSERT INTO phone_"+"(user_id,phone)"+"VALUES (?,?)");
+            PreparedStatement usersPSId=connectiondb.prepareStatement("select user_id from user_ order by user_id desc limit 1");
             usersPS.setString(1, user.getLastname());
             usersPS.setString(2, user.getFirstname());
             usersPS.setString(3, user.getMiddlename());
             usersPS.setDate(4, (java.sql.Date) user.getBirthday());
             usersPS.execute();
-            PreparedStatement usersPSId=connectiondb.prepareStatement("select user_id from user_ order by user_id desc limit 1");
             ResultSet s = usersPSId.executeQuery();
-            long id = s.getLong("user_id");;
-            emailsOfUserPS.setLong(1,id);
-            emailsOfUserPS.setString(2, user.getEmail());
-            emailsOfUserPS.execute();
-            phonesOfUserPS.setLong(1,id);
-            phonesOfUserPS.setString(2, user.getPhone());
-            phonesOfUserPS.execute();
+            if (s!=null && s.next()) {
+                long id = s.getLong("user_id");
+                emailsOfUserPS.setLong(1, id);
+                emailsOfUserPS.setString(2, user.getEmail());
+                emailsOfUserPS.execute();
+                phonesOfUserPS.setLong(1, id);
+                phonesOfUserPS.setString(2, user.getPhone());
+                phonesOfUserPS.execute();
+            }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
@@ -234,6 +235,42 @@ public class Crud {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    public static void newEmail(Long userID, String email){
+        Connection connectiondb =null;
+        PreparedStatement emailsOfUserPS=null;
+
+        try{
+            Class.forName("org.postgresql.Driver");
+            connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
+            emailsOfUserPS=connectiondb.prepareStatement("INSERT INTO email_ (user_id,email) VALUES (?,?)");
+            emailsOfUserPS.setLong(1,userID);
+            emailsOfUserPS.setString(2,email);
+            emailsOfUserPS.execute();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void newPhone(Long userID, String phone){
+        Connection connectiondb =null;
+        PreparedStatement phonesOfUserPS=null;
+
+        try{
+            Class.forName("org.postgresql.Driver");
+            connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
+            phonesOfUserPS=connectiondb.prepareStatement("INSERT INTO phone_ (user_id,phone) VALUES (?,?)");
+            phonesOfUserPS.setLong(1,userID);
+            phonesOfUserPS.setString(2,phone);
+            phonesOfUserPS.execute();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 

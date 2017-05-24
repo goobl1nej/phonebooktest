@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: root
@@ -7,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
   <head>
     <title>Контакт</title>
@@ -15,8 +15,15 @@
   <form action="<c:url value="/phonebook"/>" method="POST">
     <table>
       <tr>
-        <td><a href="phonebook?action=add">Add</a></td>
-        <td><a href="phonebook?action=all">All</a></td>
+        <td><a href="phonebook?action=add">Новый пользователь</a></td>
+      </tr>
+      <tr>
+        <td><a href="phonebook?action=all">Вывести список пользователей</a></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="userID" value="${userID}"></td>
+        <td><a href="phonebook?action=view&userID=userID">Посмотреть</a></td>
+        <td><input type="submit" value="Посмотреть" name="View"/></td>
       </tr>
     </table>
   </form>

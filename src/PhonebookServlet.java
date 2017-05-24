@@ -14,18 +14,52 @@ public class PhonebookServlet extends HttpServlet{
 //            User insUser = new User();
 //            insUser.setId(0);
 //            req.setAttribute("user", insUser);
-            getServletContext().getRequestDispatcher("/EditUser.jsp").forward(req,resp);
+            getServletContext().getRequestDispatcher("/UserAdd.jsp").forward(req,resp);
         }
         if (req.getParameter("Edit")!=null){
 
         }
+        if (req.getParameter("AddEmail")!=null){
+            if ( req.getParameter("userID")!=null && !req.getParameter("userID").isEmpty()){
+                Long userID=(Long.parseLong(req.getParameter("userID")));
+                String email=(req.getParameter("email"));
+                Crud.newEmail(userID, email);
+                User user = Crud.loadUserById(userID);
+                req.setAttribute("user", user);
+                req.getRequestDispatcher("/EditUser.jsp").forward(req, resp);
+            }
+        }
+        if (req.getParameter("AddPhone")!=null){
+            if ( req.getParameter("userID")!=null){
+                Long userID=(Long.parseLong(req.getParameter("userID")));
+                String phone=(req.getParameter("phone"));
+                Crud.newPhone(userID,phone);
+                User user = Crud.loadUserById(userID);
+                req.setAttribute("user", user);
+                req.getRequestDispatcher("/EditUser.jsp").forward(req, resp);
+            }
+        }
+
         if (req.getParameter("action")!=null && req.getParameter("action").equals("all") ){
             List<User> userList=Crud.loadAll();
-
             req.setAttribute("userList", userList);
-            getServletContext().getRequestDispatcher("/UsersView.jsp").forward(req,resp);
+            getServletContext().getRequestDispatcher("/AllUsersView.jsp").forward(req,resp);
         }
-        if (req.getParameter("action")!=null && req.getParameter("action").equals("delete")){
+        if (req.getParameter("action")!=null && req.getParameter("action").equals("view")){
+            if (req.getParameter("userID")!=null) {
+                Long userID = (Long.parseLong(req.getParameter("userID")));
+                User user = Crud.loadUserById(userID);
+                if (req.getParameter("ps")!=null) {
+                    req.setAttribute("user", user);
+                    req.getRequestDispatcher("/EditUser.jsp").forward(req, resp);
+                } else {
+                    req.setAttribute("user", user);
+                    req.getRequestDispatcher("/ViewUser.jsp").forward(req, resp);
+                }
+            }
+        }
+
+        if (req.getParameter("View")!=null){
             if (req.getParameter("id")!=null){
                 Long userID=(Long.parseLong(req.getParameter("id")));
                 Crud.deleteUser(userID);

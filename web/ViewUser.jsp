@@ -14,8 +14,6 @@
     <body>
     <form action="<c:url value="/edit"/>" method="POST">
 
-        <c:forEach var="user" items="${userList}">
-
                 <input type="hidden" name="userID" value="${user.id}"/>
                 <table>
                     <tr>
@@ -29,29 +27,29 @@
                     </tr>
                     <tr>
                         <td>Дата рождения:</td><td><input type="text" name="birthday" value="${user.birthday}"/></td>
-                        <td><a href="phonebook?action=edit">Редактировать пользователя</a></td>
-                        <td><a href="phonebook?action=delete&id=${user.id}">Удалить пользователя</a></td>
+
                     </tr>
                     <c:forEach var="email" items="${user.emails}">
                         <tr>
-                            <td>Электронная почта(ы):</td><td><input type="text" name="email" value="${email.email}"/></td>
+                            <td>Электронная почта:</td><td><input type="text" name="email" value="${email.email}"/></td>
                         </tr>
                     </c:forEach>
                     <c:forEach var="phone" items="${user.phones}">
                         <tr>
-                            <td>Телефон(ы):</td><td><input type="text" name="phone" value="${phone.phone}"/></td>
+                            <td>Телефон:</td><td><input type="text" name="phone" value="${phone.phone}"/></td>
                         </tr>
                     </c:forEach>
+                    <tr>
+                        <td><a href="phonebook?action=view&userID=${user.id}&ps=edit">Редактировать пользователя</a></td>
+                    </tr>
                 </table>
 
-        </c:forEach>
-
-        <c:if test="${userList==null}">
+        <c:if test="${user==null}">
             Пользователей не найдено
             </c:if>
     </form>
     <tr>
-    <td><a href="phonebook?action=add">Add</a></td>
+    <td><a href="phonebook?action=all">К списку пользователей</a></td>
     </tr>
 
     </body>
