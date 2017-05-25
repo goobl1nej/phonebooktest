@@ -7,16 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7709c09-1584-4072-9a07-5a479ee115bf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/EmailAdd.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/PhoneAdd.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/UserAdd.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ViewUser.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/UsersView.jsp" afterPath="$PROJECT_DIR$/web/AllUsersView.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crud.java" afterPath="$PROJECT_DIR$/src/Crud.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PhonebookServlet.java" afterPath="$PROJECT_DIR$/src/PhonebookServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserDataChangeServlet.java" afterPath="$PROJECT_DIR$/src/UserDataChangeServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/EditUser.jsp" afterPath="$PROJECT_DIR$/web/EditUser.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,62 +23,76 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Crud.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Crud.java">
+      <file leaf-file-name="Email.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Email.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-748">
-              <caret line="113" column="38" lean-forward="true" selection-start-line="113" selection-start-column="38" selection-end-line="113" selection-end-column="38" />
+            <state relative-caret-position="289">
+              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
               <folding>
-                <element signature="method#loadAll#0;class#Crud#0" expanded="false" />
-                <element signature="e#1712#1719#0" expanded="true" />
-                <element signature="e#2304#2311#0" expanded="true" />
-                <element signature="e#5240#5247#0" expanded="true" />
-                <element signature="e#5832#5839#0" expanded="true" />
-                <element signature="method#newUser#0;class#Crud#0" expanded="false" />
-                <element signature="method#newEmail#0;class#Crud#0" expanded="false" />
-                <element signature="method#newPhone#0;class#Crud#0" expanded="false" />
-                <element signature="method#updateUser#0;class#Crud#0" expanded="false" />
-                <element signature="method#deleteUser#0;class#Crud#0" expanded="false" />
-                <marker date="1495628523994" expanded="true" signature="666:685" ph="SELECT * FRO... user_" />
-                <marker date="1495628523994" expanded="true" signature="747:783" ph="SELECT * FRO... email_" />
-                <marker date="1495628523994" expanded="true" signature="845:881" ph="SELECT * FRO... phone_" />
-                <marker date="1495628523994" expanded="true" signature="4152:4187" ph="SELECT * FRO... user_WHERE" />
-                <marker date="1495628523994" expanded="true" signature="4249:4285" ph="SELECT * FRO... email_" />
-                <marker date="1495628523994" expanded="true" signature="4347:4383" ph="SELECT * FRO... phone_" />
-                <marker date="1495628523994" expanded="true" signature="7566:7583" ph="INSERT INTO user_... " />
-                <marker date="1495628523994" expanded="true" signature="7566:7626" ph="INSERT INTO user_... " />
-                <marker date="1495628523994" expanded="true" signature="7566:7645" ph="INSERT INTO user_... " />
-                <marker date="1495628523994" expanded="true" signature="7566:7647" ph="INSERT INTO user_... " />
-                <marker date="1495628523994" expanded="true" signature="7707:7725" ph="INSERT INTO email_... " />
-                <marker date="1495628523994" expanded="true" signature="7707:7743" ph="INSERT INTO email_... " />
-                <marker date="1495628523994" expanded="true" signature="7707:7758" ph="INSERT INTO email_... " />
-                <marker date="1495628523994" expanded="true" signature="7820:7871" ph="INSERT INTO phone_... " />
-                <marker date="1495628523994" expanded="true" signature="7946:8001" ph="select user_... user_" />
-                <marker date="1495628523994" expanded="true" signature="9973:10020" ph="INSERT INTO email_... " />
-                <marker date="1495628523994" expanded="true" signature="10711:10758" ph="INSERT INTO phone_... " />
-                <marker date="1495628523994" expanded="true" signature="11573:11606" ph="DELETE FROM " />
-                <marker date="1495628523994" expanded="true" signature="11668:11702" ph="DELETE FROM " />
-                <marker date="1495628523994" expanded="true" signature="11764:11798" ph="DELETE FROM " />
+                <element signature="e#257#258#0" expanded="true" />
+                <element signature="e#291#292#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EditUser.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Crud.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Crud.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="286" column="33" lean-forward="false" selection-start-line="286" selection-start-column="33" selection-end-line="286" selection-end-column="33" />
+              <folding>
+                <element signature="method#Crud#0;class#Crud#0" expanded="false" />
+                <element signature="method#loadAll#0;class#Crud#0" expanded="false" />
+                <element signature="e#1712#1719#0" expanded="true" />
+                <element signature="e#2304#2311#0" expanded="true" />
+                <element signature="method#loadUserById#0;class#Crud#0" expanded="false" />
+                <element signature="e#5164#5171#0" expanded="true" />
+                <element signature="e#5756#5763#0" expanded="true" />
+                <element signature="method#newUser#0;class#Crud#0" expanded="false" />
+                <element signature="method#newEmail#0;class#Crud#0" expanded="false" />
+                <element signature="method#newPhone#0;class#Crud#0" expanded="false" />
+                <element signature="method#deleteUser#0;class#Crud#0" expanded="false" />
+                <marker date="1495694136931" expanded="true" signature="666:685" ph="SELECT * FRO... user_" />
+                <marker date="1495694136931" expanded="true" signature="747:783" ph="SELECT * FRO... email_" />
+                <marker date="1495694136931" expanded="true" signature="845:881" ph="SELECT * FRO... phone_" />
+                <marker date="1495694136931" expanded="true" signature="4116:4151" ph="SELECT * FRO... user_WHERE" />
+                <marker date="1495694136931" expanded="true" signature="4213:4249" ph="SELECT * FRO... email_" />
+                <marker date="1495694136931" expanded="true" signature="4311:4347" ph="SELECT * FRO... phone_" />
+                <marker date="1495694136931" expanded="true" signature="7490:7507" ph="INSERT INTO user_... " />
+                <marker date="1495694136931" expanded="true" signature="7490:7550" ph="INSERT INTO user_... " />
+                <marker date="1495694136931" expanded="true" signature="7490:7569" ph="INSERT INTO user_... " />
+                <marker date="1495694136931" expanded="true" signature="7490:7571" ph="INSERT INTO user_... " />
+                <marker date="1495694136931" expanded="true" signature="7631:7649" ph="INSERT INTO email_... " />
+                <marker date="1495694136931" expanded="true" signature="7631:7667" ph="INSERT INTO email_... " />
+                <marker date="1495694136931" expanded="true" signature="7631:7682" ph="INSERT INTO email_... " />
+                <marker date="1495694136931" expanded="true" signature="7744:7795" ph="INSERT INTO phone_... " />
+                <marker date="1495694136931" expanded="true" signature="7870:7925" ph="select user_... user_" />
+                <marker date="1495694136931" expanded="true" signature="9897:9944" ph="INSERT INTO email_... " />
+                <marker date="1495694136931" expanded="true" signature="10635:10682" ph="INSERT INTO phone_... " />
+                <marker date="1495694136931" expanded="true" signature="13234:13267" ph="DELETE FROM " />
+                <marker date="1495694136931" expanded="true" signature="13329:13363" ph="DELETE FROM " />
+                <marker date="1495694136931" expanded="true" signature="13425:13459" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditUser.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/EditUser.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="32" column="59" lean-forward="false" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="59" />
+            <state relative-caret-position="221">
+              <caret line="16" column="49" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ViewUser.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ViewUser.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/ViewUser.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="63" />
+            <state relative-caret-position="578">
+              <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -103,11 +111,21 @@
       <file leaf-file-name="UserDataChangeServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UserDataChangeServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+            <state relative-caret-position="748">
+              <caret line="65" column="19" lean-forward="false" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrintPhonebook.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PrintPhonebook.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -137,28 +155,8 @@
       <file leaf-file-name="UserAdd.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/UserAdd.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmailAdd.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/EmailAdd.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PhoneAdd.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/PhoneAdd.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="63" lean-forward="false" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+            <state relative-caret-position="595">
+              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="37" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -197,19 +195,19 @@
         <option value="$PROJECT_DIR$/src/ServletOutput.java" />
         <option value="$PROJECT_DIR$/src/Email.java" />
         <option value="$PROJECT_DIR$/src/User.java" />
-        <option value="$PROJECT_DIR$/src/UserDataChangeServlet.java" />
         <option value="$PROJECT_DIR$/web/AllUserView.jsp" />
         <option value="$PROJECT_DIR$/web/EmailPhone.jsp" />
         <option value="$PROJECT_DIR$/web/UsersView.jsp" />
-        <option value="$PROJECT_DIR$/src/Crud.java" />
         <option value="$PROJECT_DIR$/web/AllUsersView.jsp" />
         <option value="$PROJECT_DIR$/web/ViewUser.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/PhoneAdd.jsp" />
-        <option value="$PROJECT_DIR$/web/EditUser.jsp" />
         <option value="$PROJECT_DIR$/web/UserAdd.jsp" />
         <option value="$PROJECT_DIR$/web/EmailAdd.jsp" />
         <option value="$PROJECT_DIR$/src/PhonebookServlet.java" />
+        <option value="$PROJECT_DIR$/web/EditUser.jsp" />
+        <option value="$PROJECT_DIR$/src/Crud.java" />
+        <option value="$PROJECT_DIR$/src/UserDataChangeServlet.java" />
       </list>
     </option>
   </component>
@@ -911,7 +909,7 @@
       <workItem from="1495114221549" duration="7283000" />
       <workItem from="1495195839921" duration="5471000" />
       <workItem from="1495202554574" duration="24251000" />
-      <workItem from="1495517969389" duration="50406000" />
+      <workItem from="1495517969389" duration="55132000" />
     </task>
     <task id="LOCAL-00001" summary="23.05">
       <created>1495548772562</created>
@@ -920,11 +918,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495548772562</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="24.05">
+      <created>1495637246031</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1495637246031</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99495000" />
+    <option name="totallyTimeSpent" value="104221000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -948,10 +953,10 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32969433" sideWeight="0.49761903" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.49761903" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -971,7 +976,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="23.05" />
-    <option name="LAST_COMMIT_MESSAGE" value="23.05" />
+    <MESSAGE value="24.05" />
+    <option name="LAST_COMMIT_MESSAGE" value="24.05" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1038,36 +1044,37 @@
         <state relative-caret-position="782">
           <caret line="258" column="35" lean-forward="true" selection-start-line="258" selection-start-column="35" selection-end-line="258" selection-end-column="35" />
           <folding>
+            <element signature="method#Crud#0;class#Crud#0" expanded="false" />
             <element signature="method#loadAll#0;class#Crud#0" expanded="false" />
             <element signature="e#1712#1719#0" expanded="true" />
             <element signature="e#2304#2311#0" expanded="true" />
-            <element signature="e#5240#5247#0" expanded="true" />
-            <element signature="e#5832#5839#0" expanded="true" />
+            <element signature="method#loadUserById#0;class#Crud#0" expanded="false" />
+            <element signature="e#5164#5171#0" expanded="true" />
+            <element signature="e#5756#5763#0" expanded="true" />
             <element signature="method#newUser#0;class#Crud#0" expanded="false" />
             <element signature="method#newEmail#0;class#Crud#0" expanded="false" />
             <element signature="method#newPhone#0;class#Crud#0" expanded="false" />
-            <element signature="method#updateUser#0;class#Crud#0" expanded="false" />
             <element signature="method#deleteUser#0;class#Crud#0" expanded="false" />
-            <marker date="1495628523994" expanded="true" signature="666:685" ph="SELECT * FRO... user_" />
-            <marker date="1495628523994" expanded="true" signature="747:783" ph="SELECT * FRO... email_" />
-            <marker date="1495628523994" expanded="true" signature="845:881" ph="SELECT * FRO... phone_" />
-            <marker date="1495628523994" expanded="true" signature="4152:4187" ph="SELECT * FRO... user_WHERE" />
-            <marker date="1495628523994" expanded="true" signature="4249:4285" ph="SELECT * FRO... email_" />
-            <marker date="1495628523994" expanded="true" signature="4347:4383" ph="SELECT * FRO... phone_" />
-            <marker date="1495628523994" expanded="true" signature="7566:7583" ph="INSERT INTO user_... " />
-            <marker date="1495628523994" expanded="true" signature="7566:7626" ph="INSERT INTO user_... " />
-            <marker date="1495628523994" expanded="true" signature="7566:7645" ph="INSERT INTO user_... " />
-            <marker date="1495628523994" expanded="true" signature="7566:7647" ph="INSERT INTO user_... " />
-            <marker date="1495628523994" expanded="true" signature="7707:7725" ph="INSERT INTO email_... " />
-            <marker date="1495628523994" expanded="true" signature="7707:7743" ph="INSERT INTO email_... " />
-            <marker date="1495628523994" expanded="true" signature="7707:7758" ph="INSERT INTO email_... " />
-            <marker date="1495628523994" expanded="true" signature="7820:7871" ph="INSERT INTO phone_... " />
-            <marker date="1495628523994" expanded="true" signature="7946:8001" ph="select user_... user_" />
-            <marker date="1495628523994" expanded="true" signature="9973:10020" ph="INSERT INTO email_... " />
-            <marker date="1495628523994" expanded="true" signature="10711:10758" ph="INSERT INTO phone_... " />
-            <marker date="1495628523994" expanded="true" signature="11573:11606" ph="DELETE FROM " />
-            <marker date="1495628523994" expanded="true" signature="11668:11702" ph="DELETE FROM " />
-            <marker date="1495628523994" expanded="true" signature="11764:11798" ph="DELETE FROM " />
+            <marker date="1495694136931" expanded="true" signature="666:685" ph="SELECT * FRO... user_" />
+            <marker date="1495694136931" expanded="true" signature="747:783" ph="SELECT * FRO... email_" />
+            <marker date="1495694136931" expanded="true" signature="845:881" ph="SELECT * FRO... phone_" />
+            <marker date="1495694136931" expanded="true" signature="4116:4151" ph="SELECT * FRO... user_WHERE" />
+            <marker date="1495694136931" expanded="true" signature="4213:4249" ph="SELECT * FRO... email_" />
+            <marker date="1495694136931" expanded="true" signature="4311:4347" ph="SELECT * FRO... phone_" />
+            <marker date="1495694136931" expanded="true" signature="7490:7507" ph="INSERT INTO user_... " />
+            <marker date="1495694136931" expanded="true" signature="7490:7550" ph="INSERT INTO user_... " />
+            <marker date="1495694136931" expanded="true" signature="7490:7569" ph="INSERT INTO user_... " />
+            <marker date="1495694136931" expanded="true" signature="7490:7571" ph="INSERT INTO user_... " />
+            <marker date="1495694136931" expanded="true" signature="7631:7649" ph="INSERT INTO email_... " />
+            <marker date="1495694136931" expanded="true" signature="7631:7667" ph="INSERT INTO email_... " />
+            <marker date="1495694136931" expanded="true" signature="7631:7682" ph="INSERT INTO email_... " />
+            <marker date="1495694136931" expanded="true" signature="7744:7795" ph="INSERT INTO phone_... " />
+            <marker date="1495694136931" expanded="true" signature="7870:7925" ph="select user_... user_" />
+            <marker date="1495694136931" expanded="true" signature="9897:9944" ph="INSERT INTO email_... " />
+            <marker date="1495694136931" expanded="true" signature="10635:10682" ph="INSERT INTO phone_... " />
+            <marker date="1495694136931" expanded="true" signature="13234:13267" ph="DELETE FROM " />
+            <marker date="1495694136931" expanded="true" signature="13329:13363" ph="DELETE FROM " />
+            <marker date="1495694136931" expanded="true" signature="13425:13459" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -1085,8 +1092,8 @@
         <state relative-caret-position="357">
           <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
           <folding>
-            <element signature="e#257#258#0" expanded="false" />
-            <element signature="e#291#292#0" expanded="false" />
+            <element signature="e#257#258#0" expanded="true" />
+            <element signature="e#291#292#0" expanded="true" />
             <element signature="e#395#396#0" expanded="false" />
             <element signature="e#429#430#0" expanded="false" />
             <element signature="e#456#457#0" expanded="false" />
@@ -1168,36 +1175,37 @@
         <state relative-caret-position="255">
           <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
           <folding>
+            <element signature="method#Crud#0;class#Crud#0" expanded="false" />
             <element signature="method#loadAll#0;class#Crud#0" expanded="false" />
             <element signature="e#1712#1719#0" expanded="true" />
             <element signature="e#2304#2311#0" expanded="true" />
-            <element signature="e#5240#5247#0" expanded="true" />
-            <element signature="e#5832#5839#0" expanded="true" />
+            <element signature="method#loadUserById#0;class#Crud#0" expanded="false" />
+            <element signature="e#5164#5171#0" expanded="true" />
+            <element signature="e#5756#5763#0" expanded="true" />
             <element signature="method#newUser#0;class#Crud#0" expanded="false" />
             <element signature="method#newEmail#0;class#Crud#0" expanded="false" />
             <element signature="method#newPhone#0;class#Crud#0" expanded="false" />
-            <element signature="method#updateUser#0;class#Crud#0" expanded="false" />
             <element signature="method#deleteUser#0;class#Crud#0" expanded="false" />
-            <marker date="1495628523994" expanded="true" signature="666:685" ph="SELECT * FRO... user_" />
-            <marker date="1495628523994" expanded="true" signature="747:783" ph="SELECT * FRO... email_" />
-            <marker date="1495628523994" expanded="true" signature="845:881" ph="SELECT * FRO... phone_" />
-            <marker date="1495628523994" expanded="true" signature="4152:4187" ph="SELECT * FRO... user_WHERE" />
-            <marker date="1495628523994" expanded="true" signature="4249:4285" ph="SELECT * FRO... email_" />
-            <marker date="1495628523994" expanded="true" signature="4347:4383" ph="SELECT * FRO... phone_" />
-            <marker date="1495628523994" expanded="true" signature="7566:7583" ph="INSERT INTO user_... " />
-            <marker date="1495628523994" expanded="true" signature="7566:7626" ph="INSERT INTO user_... " />
-            <marker date="1495628523994" expanded="true" signature="7566:7645" ph="INSERT INTO user_... " />
-            <marker date="1495628523994" expanded="true" signature="7566:7647" ph="INSERT INTO user_... " />
-            <marker date="1495628523994" expanded="true" signature="7707:7725" ph="INSERT INTO email_... " />
-            <marker date="1495628523994" expanded="true" signature="7707:7743" ph="INSERT INTO email_... " />
-            <marker date="1495628523994" expanded="true" signature="7707:7758" ph="INSERT INTO email_... " />
-            <marker date="1495628523994" expanded="true" signature="7820:7871" ph="INSERT INTO phone_... " />
-            <marker date="1495628523994" expanded="true" signature="7946:8001" ph="select user_... user_" />
-            <marker date="1495628523994" expanded="true" signature="9973:10020" ph="INSERT INTO email_... " />
-            <marker date="1495628523994" expanded="true" signature="10711:10758" ph="INSERT INTO phone_... " />
-            <marker date="1495628523994" expanded="true" signature="11573:11606" ph="DELETE FROM " />
-            <marker date="1495628523994" expanded="true" signature="11668:11702" ph="DELETE FROM " />
-            <marker date="1495628523994" expanded="true" signature="11764:11798" ph="DELETE FROM " />
+            <marker date="1495694136931" expanded="true" signature="666:685" ph="SELECT * FRO... user_" />
+            <marker date="1495694136931" expanded="true" signature="747:783" ph="SELECT * FRO... email_" />
+            <marker date="1495694136931" expanded="true" signature="845:881" ph="SELECT * FRO... phone_" />
+            <marker date="1495694136931" expanded="true" signature="4116:4151" ph="SELECT * FRO... user_WHERE" />
+            <marker date="1495694136931" expanded="true" signature="4213:4249" ph="SELECT * FRO... email_" />
+            <marker date="1495694136931" expanded="true" signature="4311:4347" ph="SELECT * FRO... phone_" />
+            <marker date="1495694136931" expanded="true" signature="7490:7507" ph="INSERT INTO user_... " />
+            <marker date="1495694136931" expanded="true" signature="7490:7550" ph="INSERT INTO user_... " />
+            <marker date="1495694136931" expanded="true" signature="7490:7569" ph="INSERT INTO user_... " />
+            <marker date="1495694136931" expanded="true" signature="7490:7571" ph="INSERT INTO user_... " />
+            <marker date="1495694136931" expanded="true" signature="7631:7649" ph="INSERT INTO email_... " />
+            <marker date="1495694136931" expanded="true" signature="7631:7667" ph="INSERT INTO email_... " />
+            <marker date="1495694136931" expanded="true" signature="7631:7682" ph="INSERT INTO email_... " />
+            <marker date="1495694136931" expanded="true" signature="7744:7795" ph="INSERT INTO phone_... " />
+            <marker date="1495694136931" expanded="true" signature="7870:7925" ph="select user_... user_" />
+            <marker date="1495694136931" expanded="true" signature="9897:9944" ph="INSERT INTO email_... " />
+            <marker date="1495694136931" expanded="true" signature="10635:10682" ph="INSERT INTO phone_... " />
+            <marker date="1495694136931" expanded="true" signature="13234:13267" ph="DELETE FROM " />
+            <marker date="1495694136931" expanded="true" signature="13329:13363" ph="DELETE FROM " />
+            <marker date="1495694136931" expanded="true" signature="13425:13459" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -1216,8 +1224,8 @@
         <state relative-caret-position="357">
           <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
           <folding>
-            <element signature="e#257#258#0" expanded="false" />
-            <element signature="e#291#292#0" expanded="false" />
+            <element signature="e#257#258#0" expanded="true" />
+            <element signature="e#291#292#0" expanded="true" />
             <element signature="e#395#396#0" expanded="false" />
             <element signature="e#429#430#0" expanded="false" />
             <element signature="e#456#457#0" expanded="false" />
@@ -1298,36 +1306,37 @@
         <state relative-caret-position="374">
           <caret line="26" column="50" lean-forward="true" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
           <folding>
+            <element signature="method#Crud#0;class#Crud#0" expanded="false" />
             <element signature="method#loadAll#0;class#Crud#0" expanded="false" />
             <element signature="e#1712#1719#0" expanded="true" />
             <element signature="e#2304#2311#0" expanded="true" />
-            <element signature="e#5240#5247#0" expanded="true" />
-            <element signature="e#5832#5839#0" expanded="true" />
+            <element signature="method#loadUserById#0;class#Crud#0" expanded="false" />
+            <element signature="e#5164#5171#0" expanded="true" />
+            <element signature="e#5756#5763#0" expanded="true" />
             <element signature="method#newUser#0;class#Crud#0" expanded="false" />
             <element signature="method#newEmail#0;class#Crud#0" expanded="false" />
             <element signature="method#newPhone#0;class#Crud#0" expanded="false" />
-            <element signature="method#updateUser#0;class#Crud#0" expanded="false" />
             <element signature="method#deleteUser#0;class#Crud#0" expanded="false" />
-            <marker date="1495628523994" expanded="true" signature="666:685" ph="SELECT * FRO... user_" />
-            <marker date="1495628523994" expanded="true" signature="747:783" ph="SELECT * FRO... email_" />
-            <marker date="1495628523994" expanded="true" signature="845:881" ph="SELECT * FRO... phone_" />
-            <marker date="1495628523994" expanded="true" signature="4152:4187" ph="SELECT * FRO... user_WHERE" />
-            <marker date="1495628523994" expanded="true" signature="4249:4285" ph="SELECT * FRO... email_" />
-            <marker date="1495628523994" expanded="true" signature="4347:4383" ph="SELECT * FRO... phone_" />
-            <marker date="1495628523994" expanded="true" signature="7566:7583" ph="INSERT INTO user_... " />
-            <marker date="1495628523994" expanded="true" signature="7566:7626" ph="INSERT INTO user_... " />
-            <marker date="1495628523994" expanded="true" signature="7566:7645" ph="INSERT INTO user_... " />
-            <marker date="1495628523994" expanded="true" signature="7566:7647" ph="INSERT INTO user_... " />
-            <marker date="1495628523994" expanded="true" signature="7707:7725" ph="INSERT INTO email_... " />
-            <marker date="1495628523994" expanded="true" signature="7707:7743" ph="INSERT INTO email_... " />
-            <marker date="1495628523994" expanded="true" signature="7707:7758" ph="INSERT INTO email_... " />
-            <marker date="1495628523994" expanded="true" signature="7820:7871" ph="INSERT INTO phone_... " />
-            <marker date="1495628523994" expanded="true" signature="7946:8001" ph="select user_... user_" />
-            <marker date="1495628523994" expanded="true" signature="9973:10020" ph="INSERT INTO email_... " />
-            <marker date="1495628523994" expanded="true" signature="10711:10758" ph="INSERT INTO phone_... " />
-            <marker date="1495628523994" expanded="true" signature="11573:11606" ph="DELETE FROM " />
-            <marker date="1495628523994" expanded="true" signature="11668:11702" ph="DELETE FROM " />
-            <marker date="1495628523994" expanded="true" signature="11764:11798" ph="DELETE FROM " />
+            <marker date="1495694136931" expanded="true" signature="666:685" ph="SELECT * FRO... user_" />
+            <marker date="1495694136931" expanded="true" signature="747:783" ph="SELECT * FRO... email_" />
+            <marker date="1495694136931" expanded="true" signature="845:881" ph="SELECT * FRO... phone_" />
+            <marker date="1495694136931" expanded="true" signature="4116:4151" ph="SELECT * FRO... user_WHERE" />
+            <marker date="1495694136931" expanded="true" signature="4213:4249" ph="SELECT * FRO... email_" />
+            <marker date="1495694136931" expanded="true" signature="4311:4347" ph="SELECT * FRO... phone_" />
+            <marker date="1495694136931" expanded="true" signature="7490:7507" ph="INSERT INTO user_... " />
+            <marker date="1495694136931" expanded="true" signature="7490:7550" ph="INSERT INTO user_... " />
+            <marker date="1495694136931" expanded="true" signature="7490:7569" ph="INSERT INTO user_... " />
+            <marker date="1495694136931" expanded="true" signature="7490:7571" ph="INSERT INTO user_... " />
+            <marker date="1495694136931" expanded="true" signature="7631:7649" ph="INSERT INTO email_... " />
+            <marker date="1495694136931" expanded="true" signature="7631:7667" ph="INSERT INTO email_... " />
+            <marker date="1495694136931" expanded="true" signature="7631:7682" ph="INSERT INTO email_... " />
+            <marker date="1495694136931" expanded="true" signature="7744:7795" ph="INSERT INTO phone_... " />
+            <marker date="1495694136931" expanded="true" signature="7870:7925" ph="select user_... user_" />
+            <marker date="1495694136931" expanded="true" signature="9897:9944" ph="INSERT INTO email_... " />
+            <marker date="1495694136931" expanded="true" signature="10635:10682" ph="INSERT INTO phone_... " />
+            <marker date="1495694136931" expanded="true" signature="13234:13267" ph="DELETE FROM " />
+            <marker date="1495694136931" expanded="true" signature="13329:13363" ph="DELETE FROM " />
+            <marker date="1495694136931" expanded="true" signature="13425:13459" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -1369,36 +1378,37 @@
         <state relative-caret-position="34">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
+            <element signature="method#Crud#0;class#Crud#0" expanded="false" />
             <element signature="method#loadAll#0;class#Crud#0" expanded="false" />
             <element signature="e#1712#1719#0" expanded="true" />
             <element signature="e#2304#2311#0" expanded="true" />
-            <element signature="e#5240#5247#0" expanded="true" />
-            <element signature="e#5832#5839#0" expanded="true" />
+            <element signature="method#loadUserById#0;class#Crud#0" expanded="false" />
+            <element signature="e#5164#5171#0" expanded="true" />
+            <element signature="e#5756#5763#0" expanded="true" />
             <element signature="method#newUser#0;class#Crud#0" expanded="false" />
             <element signature="method#newEmail#0;class#Crud#0" expanded="false" />
             <element signature="method#newPhone#0;class#Crud#0" expanded="false" />
-            <element signature="method#updateUser#0;class#Crud#0" expanded="false" />
             <element signature="method#deleteUser#0;class#Crud#0" expanded="false" />
-            <marker date="1495628523994" expanded="true" signature="666:685" ph="SELECT * FRO... user_" />
-            <marker date="1495628523994" expanded="true" signature="747:783" ph="SELECT * FRO... email_" />
-            <marker date="1495628523994" expanded="true" signature="845:881" ph="SELECT * FRO... phone_" />
-            <marker date="1495628523994" expanded="true" signature="4152:4187" ph="SELECT * FRO... user_WHERE" />
-            <marker date="1495628523994" expanded="true" signature="4249:4285" ph="SELECT * FRO... email_" />
-            <marker date="1495628523994" expanded="true" signature="4347:4383" ph="SELECT * FRO... phone_" />
-            <marker date="1495628523994" expanded="true" signature="7566:7583" ph="INSERT INTO user_... " />
-            <marker date="1495628523994" expanded="true" signature="7566:7626" ph="INSERT INTO user_... " />
-            <marker date="1495628523994" expanded="true" signature="7566:7645" ph="INSERT INTO user_... " />
-            <marker date="1495628523994" expanded="true" signature="7566:7647" ph="INSERT INTO user_... " />
-            <marker date="1495628523994" expanded="true" signature="7707:7725" ph="INSERT INTO email_... " />
-            <marker date="1495628523994" expanded="true" signature="7707:7743" ph="INSERT INTO email_... " />
-            <marker date="1495628523994" expanded="true" signature="7707:7758" ph="INSERT INTO email_... " />
-            <marker date="1495628523994" expanded="true" signature="7820:7871" ph="INSERT INTO phone_... " />
-            <marker date="1495628523994" expanded="true" signature="7946:8001" ph="select user_... user_" />
-            <marker date="1495628523994" expanded="true" signature="9973:10020" ph="INSERT INTO email_... " />
-            <marker date="1495628523994" expanded="true" signature="10711:10758" ph="INSERT INTO phone_... " />
-            <marker date="1495628523994" expanded="true" signature="11573:11606" ph="DELETE FROM " />
-            <marker date="1495628523994" expanded="true" signature="11668:11702" ph="DELETE FROM " />
-            <marker date="1495628523994" expanded="true" signature="11764:11798" ph="DELETE FROM " />
+            <marker date="1495694136931" expanded="true" signature="666:685" ph="SELECT * FRO... user_" />
+            <marker date="1495694136931" expanded="true" signature="747:783" ph="SELECT * FRO... email_" />
+            <marker date="1495694136931" expanded="true" signature="845:881" ph="SELECT * FRO... phone_" />
+            <marker date="1495694136931" expanded="true" signature="4116:4151" ph="SELECT * FRO... user_WHERE" />
+            <marker date="1495694136931" expanded="true" signature="4213:4249" ph="SELECT * FRO... email_" />
+            <marker date="1495694136931" expanded="true" signature="4311:4347" ph="SELECT * FRO... phone_" />
+            <marker date="1495694136931" expanded="true" signature="7490:7507" ph="INSERT INTO user_... " />
+            <marker date="1495694136931" expanded="true" signature="7490:7550" ph="INSERT INTO user_... " />
+            <marker date="1495694136931" expanded="true" signature="7490:7569" ph="INSERT INTO user_... " />
+            <marker date="1495694136931" expanded="true" signature="7490:7571" ph="INSERT INTO user_... " />
+            <marker date="1495694136931" expanded="true" signature="7631:7649" ph="INSERT INTO email_... " />
+            <marker date="1495694136931" expanded="true" signature="7631:7667" ph="INSERT INTO email_... " />
+            <marker date="1495694136931" expanded="true" signature="7631:7682" ph="INSERT INTO email_... " />
+            <marker date="1495694136931" expanded="true" signature="7744:7795" ph="INSERT INTO phone_... " />
+            <marker date="1495694136931" expanded="true" signature="7870:7925" ph="select user_... user_" />
+            <marker date="1495694136931" expanded="true" signature="9897:9944" ph="INSERT INTO email_... " />
+            <marker date="1495694136931" expanded="true" signature="10635:10682" ph="INSERT INTO phone_... " />
+            <marker date="1495694136931" expanded="true" signature="13234:13267" ph="DELETE FROM " />
+            <marker date="1495694136931" expanded="true" signature="13329:13363" ph="DELETE FROM " />
+            <marker date="1495694136931" expanded="true" signature="13425:13459" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -1511,19 +1521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Email.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding>
-            <element signature="e#257#258#0" expanded="false" />
-            <element signature="e#291#292#0" expanded="false" />
-            <element signature="e#325#326#0" expanded="false" />
-            <element signature="e#353#354#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1562,18 +1559,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PrintPhonebook.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/PhoneAdd.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="63" lean-forward="false" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/EmailAdd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1588,82 +1585,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/UserAdd.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="595">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="37" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/EmailAdd.jsp">
+    <entry file="file://$PROJECT_DIR$/web/EditUser.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="221">
+          <caret line="16" column="49" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="49" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/AllUsersView.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="50" lean-forward="false" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/ViewUser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserDataChangeServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Crud.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-748">
-          <caret line="113" column="38" lean-forward="true" selection-start-line="113" selection-start-column="38" selection-end-line="113" selection-end-column="38" />
-          <folding>
-            <element signature="method#loadAll#0;class#Crud#0" expanded="false" />
-            <element signature="e#1712#1719#0" expanded="true" />
-            <element signature="e#2304#2311#0" expanded="true" />
-            <element signature="e#5240#5247#0" expanded="true" />
-            <element signature="e#5832#5839#0" expanded="true" />
-            <element signature="method#newUser#0;class#Crud#0" expanded="false" />
-            <element signature="method#newEmail#0;class#Crud#0" expanded="false" />
-            <element signature="method#newPhone#0;class#Crud#0" expanded="false" />
-            <element signature="method#updateUser#0;class#Crud#0" expanded="false" />
-            <element signature="method#deleteUser#0;class#Crud#0" expanded="false" />
-            <marker date="1495628523994" expanded="true" signature="666:685" ph="SELECT * FRO... user_" />
-            <marker date="1495628523994" expanded="true" signature="747:783" ph="SELECT * FRO... email_" />
-            <marker date="1495628523994" expanded="true" signature="845:881" ph="SELECT * FRO... phone_" />
-            <marker date="1495628523994" expanded="true" signature="4152:4187" ph="SELECT * FRO... user_WHERE" />
-            <marker date="1495628523994" expanded="true" signature="4249:4285" ph="SELECT * FRO... email_" />
-            <marker date="1495628523994" expanded="true" signature="4347:4383" ph="SELECT * FRO... phone_" />
-            <marker date="1495628523994" expanded="true" signature="7566:7583" ph="INSERT INTO user_... " />
-            <marker date="1495628523994" expanded="true" signature="7566:7626" ph="INSERT INTO user_... " />
-            <marker date="1495628523994" expanded="true" signature="7566:7645" ph="INSERT INTO user_... " />
-            <marker date="1495628523994" expanded="true" signature="7566:7647" ph="INSERT INTO user_... " />
-            <marker date="1495628523994" expanded="true" signature="7707:7725" ph="INSERT INTO email_... " />
-            <marker date="1495628523994" expanded="true" signature="7707:7743" ph="INSERT INTO email_... " />
-            <marker date="1495628523994" expanded="true" signature="7707:7758" ph="INSERT INTO email_... " />
-            <marker date="1495628523994" expanded="true" signature="7820:7871" ph="INSERT INTO phone_... " />
-            <marker date="1495628523994" expanded="true" signature="7946:8001" ph="select user_... user_" />
-            <marker date="1495628523994" expanded="true" signature="9973:10020" ph="INSERT INTO email_... " />
-            <marker date="1495628523994" expanded="true" signature="10711:10758" ph="INSERT INTO phone_... " />
-            <marker date="1495628523994" expanded="true" signature="11573:11606" ph="DELETE FROM " />
-            <marker date="1495628523994" expanded="true" signature="11668:11702" ph="DELETE FROM " />
-            <marker date="1495628523994" expanded="true" signature="11764:11798" ph="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1677,10 +1609,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/EditUser.jsp">
+    <entry file="file://$PROJECT_DIR$/src/Crud.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="59" lean-forward="false" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="59" />
+        <state relative-caret-position="475">
+          <caret line="286" column="33" lean-forward="false" selection-start-line="286" selection-start-column="33" selection-end-line="286" selection-end-column="33" />
+          <folding>
+            <element signature="method#Crud#0;class#Crud#0" expanded="false" />
+            <element signature="method#loadAll#0;class#Crud#0" expanded="false" />
+            <element signature="e#1712#1719#0" expanded="true" />
+            <element signature="e#2304#2311#0" expanded="true" />
+            <element signature="method#loadUserById#0;class#Crud#0" expanded="false" />
+            <element signature="e#5164#5171#0" expanded="true" />
+            <element signature="e#5756#5763#0" expanded="true" />
+            <element signature="method#newUser#0;class#Crud#0" expanded="false" />
+            <element signature="method#newEmail#0;class#Crud#0" expanded="false" />
+            <element signature="method#newPhone#0;class#Crud#0" expanded="false" />
+            <element signature="method#deleteUser#0;class#Crud#0" expanded="false" />
+            <marker date="1495694136931" expanded="true" signature="666:685" ph="SELECT * FRO... user_" />
+            <marker date="1495694136931" expanded="true" signature="747:783" ph="SELECT * FRO... email_" />
+            <marker date="1495694136931" expanded="true" signature="845:881" ph="SELECT * FRO... phone_" />
+            <marker date="1495694136931" expanded="true" signature="4116:4151" ph="SELECT * FRO... user_WHERE" />
+            <marker date="1495694136931" expanded="true" signature="4213:4249" ph="SELECT * FRO... email_" />
+            <marker date="1495694136931" expanded="true" signature="4311:4347" ph="SELECT * FRO... phone_" />
+            <marker date="1495694136931" expanded="true" signature="7490:7507" ph="INSERT INTO user_... " />
+            <marker date="1495694136931" expanded="true" signature="7490:7550" ph="INSERT INTO user_... " />
+            <marker date="1495694136931" expanded="true" signature="7490:7569" ph="INSERT INTO user_... " />
+            <marker date="1495694136931" expanded="true" signature="7490:7571" ph="INSERT INTO user_... " />
+            <marker date="1495694136931" expanded="true" signature="7631:7649" ph="INSERT INTO email_... " />
+            <marker date="1495694136931" expanded="true" signature="7631:7667" ph="INSERT INTO email_... " />
+            <marker date="1495694136931" expanded="true" signature="7631:7682" ph="INSERT INTO email_... " />
+            <marker date="1495694136931" expanded="true" signature="7744:7795" ph="INSERT INTO phone_... " />
+            <marker date="1495694136931" expanded="true" signature="7870:7925" ph="select user_... user_" />
+            <marker date="1495694136931" expanded="true" signature="9897:9944" ph="INSERT INTO email_... " />
+            <marker date="1495694136931" expanded="true" signature="10635:10682" ph="INSERT INTO phone_... " />
+            <marker date="1495694136931" expanded="true" signature="13234:13267" ph="DELETE FROM " />
+            <marker date="1495694136931" expanded="true" signature="13329:13363" ph="DELETE FROM " />
+            <marker date="1495694136931" expanded="true" signature="13425:13459" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Email.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="e#257#258#0" expanded="true" />
+            <element signature="e#291#292#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PrintPhonebook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserDataChangeServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="65" column="19" lean-forward="false" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/AllUsersView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="50" lean-forward="false" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ViewUser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
           <folding />
         </state>
       </provider>

@@ -33,15 +33,18 @@
                     <c:forEach var="email" items="${user.emails}">
                         <tr>
                             <td>Электронная почта:</td><td><input type="text" name="email" value="${email.email}"/></td>
-                            <td><a href="EmailAdd.jsp?action=email&userID=${user.id}">Добавить почту</a></td>
                         </tr>
                     </c:forEach>
+                    <td><a href="EmailAdd.jsp?action=email&userID=${user.id}">Добавить почту</a></td>
                     <c:forEach var="phone" items="${user.phones}">
                         <tr>
                             <td>Телефон:</td><td><input type="text" name="phone" value="${phone.phone}"/></td>
-                            <td><a href="PhoneAdd.jsp?action=phone&userID=${user.id}">Добавить телефон</a></td>
                         </tr>
                     </c:forEach>
+                    <td><a href="PhoneAdd.jsp?action=phone&userID=${user.id}">Добавить телефон</a></td>
+                    <tr>
+                        <td><input type="submit" value="Сохранить" name="save"/></td>
+                    </tr>
                 </table>
 
         <c:if test="${user==null}">
