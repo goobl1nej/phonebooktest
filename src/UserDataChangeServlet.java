@@ -18,12 +18,12 @@ public class UserDataChangeServlet extends HttpServlet {
             insUser(req);
             req.getRequestDispatcher("/phonebook?action=all").forward(req, resp);
         }
-        if (req.getParameter("save")!=null) {
-            if (req.getParameter("userID")!=null && !req.getParameter("userID").isEmpty()) {
-                editUser(req);
-                req.getRequestDispatcher("/phonebook?action=all").forward(req, resp);
-            }
-        }
+//        if (req.getParameter("save")!=null) {
+//            if (req.getParameter("userID")!=null && !req.getParameter("userID").isEmpty()) {
+//                editUser(req);
+//                req.getRequestDispatcher("/phonebook?action=all").forward(req, resp);
+//            }
+//        }
     }
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -42,11 +42,11 @@ public class UserDataChangeServlet extends HttpServlet {
         }
     }
 
-    private void editUser(HttpServletRequest req) throws ServletException, IOException, ParseException {
-        User newUser = reqUser(req);
-        Long userID = Long.parseLong(req.getParameter("userID"));
-        Crud.updateUser(userID, newUser);
-    }
+//    private void editUser(HttpServletRequest req) throws ServletException, IOException, ParseException {
+//        User newUser = reqUser(req);
+//        Long userID = Long.parseLong(req.getParameter("userID"));
+//        Crud.updateUser(userID, newUser);
+//    }
 
     private void insUser(HttpServletRequest req) throws ServletException, IOException, ParseException {
         User newUser = reqUser(req);
@@ -63,9 +63,9 @@ public class UserDataChangeServlet extends HttpServlet {
         java.util.Date utilDate = sdf.parse(req.getParameter("birthday"));
         java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
         User.setBirthday(sqlDate);
-        for (phone:req.getParameter("phone")) {
-            
-        }
+//        for (phone:req.getParameter("phone")) {
+//
+//        }
         User.setEmail(req.getParameter("email"));
         User.setPhone(req.getParameter("phone"));
         return User;

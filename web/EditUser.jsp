@@ -9,7 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
-    <title>Список пользователей</title>
+    <title></title>
 </head>
     <body>
     <form action="<c:url value="/edit"/>" method="POST">
@@ -27,8 +27,7 @@
                     </tr>
                     <tr>
                         <td>Дата рождения:</td><td><input type="text" name="birthday" value="${user.birthday}"/></td>
-                        <td><a href="phonebook?action=edit">Редактировать пользователя</a></td>
-                        <td><a href="phonebook?action=delete&id=${user.id}">Удалить пользователя</a></td>
+                        <td><a href="phonebook?action=delete&userID=${user.id}">Удалить пользователя</a></td>
                     </tr>
                     <c:forEach var="email" items="${user.emails}">
                         <tr>

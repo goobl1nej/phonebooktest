@@ -177,6 +177,7 @@ public class Crud {
 
 
         return user;
+
     }
 
     public static void newUser(User user){
@@ -272,53 +273,53 @@ public class Crud {
         }
     }
 
-    public static void updateUser(Long userID, User user){
-        Connection connectiondb =null;
-        PreparedStatement usersPS=null;
-        PreparedStatement emailsOfUserPS=null;
-        PreparedStatement phonesOfUserPS=null;
-
-        try {
-            Class.forName("org.postgresql.Driver");
-            connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
-            usersPS=connectiondb.prepareStatement("ALTER * FROM user_ WHERE user_id=? "+"(lastname,firstname,middlename,birthday)"+"VALUES (?,?,?,?)");
-            emailsOfUserPS=connectiondb.prepareStatement("ALTER * FROM email_ WHERE user_id=?"+"email"+"VALUES (?)");
-            phonesOfUserPS=connectiondb.prepareStatement("ALTER * FROM phone_ WHERE user_id=?"+"phone"+"VALUES (?)");
-            usersPS.setLong(1,userID);
-            ResultSet userset =usersPS.executeQuery();
-
-
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }finally {
-            if(phonesOfUserPS!=null) try {
-                phonesOfUserPS.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            if(emailsOfUserPS!=null) try {
-                emailsOfUserPS.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            if(usersPS!=null) try {
-                usersPS.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            if(connectiondb!=null) try {
-                connectiondb.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-
-
-        return user;
-    }
-    }
+//    public static void updateUser(Long userID, User user){
+//        Connection connectiondb =null;
+//        PreparedStatement usersPS=null;
+//        PreparedStatement emailsOfUserPS=null;
+//        PreparedStatement phonesOfUserPS=null;
+//
+//        try {
+//            Class.forName("org.postgresql.Driver");
+//            connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
+//            usersPS=connectiondb.prepareStatement("ALTER * FROM user_ WHERE user_id=? "+"(lastname,firstname,middlename,birthday)"+"VALUES (?,?,?,?)");
+//            emailsOfUserPS=connectiondb.prepareStatement("ALTER * FROM email_ WHERE user_id=?"+"email"+"VALUES (?)");
+//            phonesOfUserPS=connectiondb.prepareStatement("ALTER * FROM phone_ WHERE user_id=?"+"phone"+"VALUES (?)");
+//            usersPS.setLong(1,userID);
+//            ResultSet userset =usersPS.executeQuery();
+//
+//
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }finally {
+//            if(phonesOfUserPS!=null) try {
+//                phonesOfUserPS.close();
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            }
+//            if(emailsOfUserPS!=null) try {
+//                emailsOfUserPS.close();
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            }
+//            if(usersPS!=null) try {
+//                usersPS.close();
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            }
+//            if(connectiondb!=null) try {
+//                connectiondb.close();
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//
+//
+//        return user;
+//    }
+//    }
 
     public static void deleteUser(Long userID){
         Connection connectiondb =null;

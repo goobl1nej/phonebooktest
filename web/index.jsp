@@ -22,7 +22,6 @@
       </tr>
       <tr>
         <td><input type="text" name="userID" value="${userID}"></td>
-        <td><a href="phonebook?action=view&userID=userID">Посмотреть</a></td>
         <td><input type="submit" value="Посмотреть" name="View"/></td>
       </tr>
     </table>
