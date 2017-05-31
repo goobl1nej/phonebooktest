@@ -10,10 +10,14 @@
           <element id="library" level="project" name="Arquillian TestNG:Release" />
           <element id="library" level="project" name="postgresql-42.1.1" />
           <element id="library" level="project" name="jstl" />
+          <element id="library" level="project" name="servlet-api" />
+          <element id="library" level="project" name="standard" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="phonebook2/web/Web" />
-      <element id="library" level="project" name="servlet-api" />
+      <element id="directory" name="images">
+        <element id="dir-copy" path="$PROJECT_DIR$/images" />
+      </element>
     </root>
   </artifact>
 </component>

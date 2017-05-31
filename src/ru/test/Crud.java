@@ -1,4 +1,5 @@
-import javax.jws.soap.SOAPBinding;
+package ru.test;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Date;
@@ -123,23 +124,23 @@ public class Crud {
                     emailsOfUserPS.setLong(1, user.getId());
                     ResultSet emailsRS=emailsOfUserPS.executeQuery();
                     if(emailsRS!=null) {
-                        List<Email> emails=new ArrayList<Email>();
+                        List<Email>emails=new ArrayList<Email>();
                         while (emailsRS.next()){
-                            int emailId=emailsRS.getInt("email_id");
+                            long emailID=emailsRS.getInt("email_id");
                             String email = emailsRS.getString("email");
 
-                            emails.add(new Email(emailId, email));
+                            emails.add(new Email(emailID, email));
                         }
                         user.setEmails(emails);
                     }
                     phonesOfUserPS.setLong(1,user.getId());
                     ResultSet phonesRS=phonesOfUserPS.executeQuery();
                     if(phonesRS!=null) {
-                        List<Phone> phones=new ArrayList<Phone>();
+                        List<Phone>phones=new ArrayList<Phone>();
                         while (phonesRS.next()) {
-                            int phoneId=phonesRS.getInt("phone_id");
+                            long phoneID=phonesRS.getInt("phone_id");
                             String phone=phonesRS.getString("phone");
-                            phones.add(new Phone(phoneId,phone));
+                            phones.add(new Phone(phoneID,phone));
                         }
                         user.setPhones(phones);
                     }
@@ -255,6 +256,24 @@ public class Crud {
         }
     }
 
+    public static void editEmail(Long emailID, String email) {
+        Connection connectiondb = null;
+        PreparedStatement emailsPS=null;
+
+        try{
+            Class.forName("org.postgresql.Driver");
+            connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
+            emailsPS = connectiondb.prepareStatement("UPDATE email_ SET email=? WHERE email_id=?");
+            emailsPS.setLong(2,emailID);
+            emailsPS.setString(1,email);
+            emailsPS.execute();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void newPhone(Long userID, String phone){
         Connection connectiondb =null;
         PreparedStatement phonesOfUserPS=null;
@@ -273,7 +292,25 @@ public class Crud {
         }
     }
 
-//    public static void updateUser(Long userID, User user){
+    public static void editPhone(Long phoneID, String phone) {
+        Connection connectiondb = null;
+        PreparedStatement phonePS=null;
+
+        try{
+            Class.forName("org.postgresql.Driver");
+            connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
+            phonePS = connectiondb.prepareStatement("UPDATE phone_ SET phone=? WHERE phone_id=?");
+            phonePS.setLong(2,phoneID);
+            phonePS.setString(1,phone);
+            phonePS.execute();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+//    public static void updateUser(Long userID, ru.test.User user){
 //        Connection connectiondb =null;
 //        PreparedStatement usersPS=null;
 //        PreparedStatement emailsOfUserPS=null;

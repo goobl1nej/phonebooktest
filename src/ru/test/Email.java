@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+package ru.test;
 
 public class Email {
     private long id;
@@ -37,7 +37,7 @@ public class Email {
 
     @Override
     public String toString() {
-        return "Email{" +
+        return "ru.test.Email{" +
                 "id=" + id +
                 ", email='" + email + '\'' +
                 '}';

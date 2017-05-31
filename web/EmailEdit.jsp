@@ -13,19 +13,24 @@
 </head>
 <body>
 <%  String userIdParam=request.getParameter("userID");
+    String emailIdParam =request.getParameter("emailID");
+    String email=request.getParameter("email");
     if(userIdParam!=null && !userIdParam.isEmpty()) {
+    if(emailIdParam !=null && !emailIdParam.isEmpty()) {
 %>
 <form action="<c:url value="/phonebook"/>" method="POST">
-    <input type="hidden" name="userID" value="<%=userIdParam %>"/>
+    <input type="hidden" name="userID" value="<%=userIdParam%>"/>
+    <input type="hidden" name="emailID" value="<%=emailIdParam%>"/>
     <table>
         <tr>
-            <td>Ваша почта:</td><td><input type="text" name="email" value="${email}"/></td>
-            <td><input type="submit" value="Добавить" name="AddEmail"/></td>
+            <td><input type="text" name="email" value="<%=email%>"/></td>
+            <td><input type="submit" name="EditEmail" value="Обновить"></td>
         </tr>
     </table>
 </form>
-<% } else {
-        %>Не указан идентификатор пользователя!<%
+<% }
+} else {
+%>Не указан идентификатор пользователя!<%
 }%>
 </body>
 </html>

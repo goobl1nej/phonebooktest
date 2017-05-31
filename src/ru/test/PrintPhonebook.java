@@ -1,3 +1,5 @@
+package ru.test;
+
 import java.util.List;
 public class PrintPhonebook {
     public static void printPhonebook(List<User> users) {

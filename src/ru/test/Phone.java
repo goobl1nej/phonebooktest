@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+package ru.test;
 
 public class Phone{
     private long id;
@@ -34,7 +34,7 @@ public class Phone{
 
     @Override
     public String toString() {
-        return "Phone{" +
+        return "ru.test.Phone{" +
                 "id=" + id +
                 ", phone='" + phone + '\'' +
                 '}';

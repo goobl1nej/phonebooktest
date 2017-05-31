@@ -1,4 +1,5 @@
-import java.util.ArrayList;
+package ru.test;
+
 import java.util.Date;
 import java.util.List;
 
@@ -125,7 +126,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "ru.test.User{" +
                 "id=" + id +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +

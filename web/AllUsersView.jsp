@@ -1,44 +1,61 @@
 <%--
   Created by IntelliJ IDEA.
-  User: root
+  ru.test.User: root
   Date: 22.05.2017
   Time: 15:29
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Список пользователей</title>
+    <style type="text/css">
+        .cell {
+            padding: 5px 10px;
+        }
+    </style>
 </head>
-    <body>
-    <form action="<c:url value="/edit"/>" method="POST">
+<body>
+<form action="<c:url value="/edit"/>" method="POST">
+    <table align="center" width="50%" style="margin-bottom: 10px;">
+        <tr>
+            <td align="left" class="cell">
+                <a href="phonebook?action=add">
+                    <img src="images/addcard.jpg" width="50px" height="50px">
+                    <%--<button style="padding: 7px 20px">Создать контакт</button>--%>
+                </a>
+            </td>
+        </tr>
+    </table>
 
-        <c:forEach var="user" items="${userList}">
 
-                <input type="hidden" name="userID" value="${user.id}"/>
-                <table>
-                    <tr>
-                        <td>Фамилия:</td><td><input type="text" name="lastName" value="${user.lastname}"/></td>
-                    </tr>
-                    <tr>
-                        <td>Имя:</td><td><input type="text" name="firstName" value="${user.firstname}"/></td>
-                    </tr>
-                    <tr>
-                        <td>Дата рождения:</td><td><input type="text" name="birthday" value="${user.birthday}"/></td>
-                    </tr>
-                </table>
-            <td><a href="phonebook?action=view&userID=${user.id}">Карточка пользователя</a></td>
+    <c:if test="${userList!=null}">
+        <table align="center" width="50%" border="1">
+            <tr>
+                <td align="center" class="cell">Фамилия:</td>
+                <td align="center" class="cell">Имя:</td>
+                <td align="center" class="cell">Дата рождения:</td>
+                <td></td>
+            </tr>
 
-        </c:forEach>
+            <c:forEach var="user" items="${userList}">
+                <tr>
+                    <td class="cell">${user.lastname}</td>
+                    <td class="cell">${user.firstname}</td>
+                    <td class="cell">${user.birthday}</td>
+                    <td class="cell"><a href="phonebook?action=view&userID=${user.id}">Карточка пользователя</a></td>
+                </tr>
+            </c:forEach>
 
-        <c:if test="${userList==null}">
-            Пользователей не найдено
-            </c:if>
-    </form>
-    <tr>
-    <td><a href="phonebook?action=add">Add</a></td>
-    </tr>
+        </table>
+    </c:if>
 
-    </body>
+    <c:if test="${userList==null}">
+        Пользователей не найдено
+    </c:if>
+</form>
+
+
+</body>
 </html>

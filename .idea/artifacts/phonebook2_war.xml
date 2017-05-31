@@ -3,10 +3,10 @@
     <output-path>$PROJECT_DIR$/out/artifacts/phonebook2_war</output-path>
     <root id="archive" name="phonebook2.war">
       <element id="artifact" artifact-name="phonebook2:war exploded" />
-      <element id="library" level="project" name="servlet-api" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="lib">
           <element id="library" level="project" name="standard" />
+          <element id="library" level="project" name="servlet-api" />
         </element>
       </element>
     </root>
