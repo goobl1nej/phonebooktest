@@ -7,21 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7709c09-1584-4072-9a07-5a479ee115bf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/deleteuser.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/edituser.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/home.png" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/EmailEdit111.jsp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/excludeFromValidation.xml" afterPath="$PROJECT_DIR$/.idea/excludeFromValidation.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Arquillian_TestNG_Release.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Arquillian_TestNG_Release.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/test/Crud.java" afterPath="$PROJECT_DIR$/src/ru/test/Crud.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/test/PhonebookServlet.java" afterPath="$PROJECT_DIR$/src/ru/test/PhonebookServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/test/UserDataChangeServlet.java" afterPath="$PROJECT_DIR$/src/ru/test/UserDataChangeServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/AllUsersView.jsp" afterPath="$PROJECT_DIR$/web/AllUsersView.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/EditUser.jsp" afterPath="$PROJECT_DIR$/web/EditUser.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/UserAdd.jsp" afterPath="$PROJECT_DIR$/web/UserAdd.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/ViewUser.jsp" afterPath="$PROJECT_DIR$/web/ViewUser.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -970,7 +956,7 @@
       <workItem from="1495195839921" duration="5471000" />
       <workItem from="1495202554574" duration="24251000" />
       <workItem from="1495517969389" duration="108378000" />
-      <workItem from="1496308993956" duration="10869000" />
+      <workItem from="1496308993956" duration="10932000" />
     </task>
     <task id="LOCAL-00001" summary="23.05">
       <created>1495548772562</created>
@@ -1000,11 +986,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496242448998</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="02.06">
+      <created>1496641421527</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1496641421527</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168336000" />
+    <option name="totallyTimeSpent" value="168399000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1063,7 +1056,8 @@
     <MESSAGE value="24.05" />
     <MESSAGE value="25.05" />
     <MESSAGE value="31.05" />
-    <option name="LAST_COMMIT_MESSAGE" value="31.05" />
+    <MESSAGE value="02.06" />
+    <option name="LAST_COMMIT_MESSAGE" value="02.06" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
