@@ -25,7 +25,7 @@
             <td align="right">Отчество:</td><td><input type="text" name="middleName" value="${middlename}"/></td>
         </tr>
         <tr>
-            <td align="right">Дата рождения:</td><td><div title="Введите дату в формате dd-MM-yyyy"><input type="text" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" name="birthday" value="${birthday}"/></div></td>
+            <td align="right">Дата рождения:</td><td><div title="Введите дату в формате dd.MM.yyyy"><input type="text" pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}" name="birthday" value="${birthday}"/></div></td>
         </tr>
         <tr>
             <td align="right">Электронная почта:</td><td><input type="text" name="email" value="${email}"/></td>

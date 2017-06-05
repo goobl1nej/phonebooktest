@@ -11,16 +11,20 @@ import java.text.SimpleDateFormat;
 
 @WebServlet(name = "edit", urlPatterns = "/edit")
 public class UserDataChangeServlet extends HttpServlet {
-    private static final SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+    public static final SimpleDateFormat sdf = new SimpleDateFormat("dd.mm.yyyy");
     protected void viewRequest(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException, ParseException {
+        req.setCharacterEncoding("UTF-8");
         if (req.getParameter("OK")!=null) {
             insUser(req);
             req.getRequestDispatcher("/phonebook?action=all").forward(req, resp);
         }
-        if (req.getParameter("save")!=null) {
+        if (req.getParameter("editUser")!=null) {
             if (req.getParameter("userID")!=null && !req.getParameter("userID").isEmpty()) {
                 editUser(req);
-                req.getRequestDispatcher("/phonebook?action=all").forward(req, resp);
+                Long userID = Long.parseLong(req.getParameter("userID"));
+                User user = Crud.loadUserById(userID);
+                req.setAttribute("user",user);
+                req.getRequestDispatcher("/ViewUser.jsp").forward(req,resp);
             }
         }
     }
@@ -41,32 +45,42 @@ public class UserDataChangeServlet extends HttpServlet {
         }
     }
 
-    private void editUser(HttpServletRequest req) throws ServletException, IOException, ParseException {
-        User newUser = reqUser(req);
-        Long userID = Long.parseLong(req.getParameter("userID"));
-//        ru.test.Crud.updateUser(userID, newUser);
-    }
-
-    private void insUser(HttpServletRequest req) throws ServletException, IOException, ParseException {
-        User newUser = reqUser(req);
-        Crud.newUser(newUser);
-    }
-
-    private User reqUser(HttpServletRequest req) throws ServletException, IOException, ParseException {
+    public User setUser (HttpServletRequest req) throws ServletException, IOException, ParseException {
         User User = new User();
-//        List<ru.test.Email> emails = new ArrayList<ru.test.Email>();
-//        List<ru.test.Phone> phones = new ArrayList<ru.test.Phone>();
         User.setLastname(req.getParameter("lastName"));
         User.setFirstname(req.getParameter("firstName"));
         User.setMiddlename(req.getParameter("middleName"));
         java.util.Date utilDate = sdf.parse(req.getParameter("birthday"));
         java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
         User.setBirthday(sqlDate);
-//        for (String reqphone: req.getParameterValues("phone")) {
-//            phone.setPhone();
+        return User;
+    }
+
+    private void editUser(HttpServletRequest req) throws ServletException, IOException, ParseException {
+        User editUser = setUser(req);
+        Long userID = Long.parseLong(req.getParameter("userID"));
+        ru.test.Crud.updateUser(userID, editUser);
+    }
+
+    private void insUser(HttpServletRequest req) throws ServletException, IOException, ParseException {
+        User newUser = setAllUser(req);
+        Crud.newUser(newUser);
+    }
+
+    public User setAllUser(HttpServletRequest req) throws ServletException, IOException, ParseException{
+        User User = new User();
+        User.setLastname(req.getParameter("lastName"));
+        User.setFirstname(req.getParameter("firstName"));
+        User.setMiddlename(req.getParameter("middleName"));
+        java.util.Date utilDate = sdf.parse(req.getParameter("birthday"));
+        java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+        User.setBirthday(sqlDate);
+//        if (req.getParameter("email")!=null && !req.getParameter("email").isEmpty()) {
+            User.setEmail(req.getParameter("email"));
 //        }
-        User.setEmail(req.getParameter("email"));
-        User.setPhone(req.getParameter("phone"));
+//        if (req.getParameter("phone")!=null && !req.getParameter("phone").isEmpty()) {
+            User.setPhone(req.getParameter("phone"));
+//        }
         return User;
     }
 }

@@ -21,6 +21,9 @@
     <table align="center" width="50%" style="margin-bottom: 10px;">
         <tr>
             <td align="left" class="cell">
+                <a href="index.jsp">
+                    <img src="images/home.png" width="50px" height="50px">
+                </a>
                 <a href="phonebook?action=add">
                     <img src="images/addcard.jpg" width="50px" height="50px">
                     <%--<button style="padding: 7px 20px">Создать контакт</button>--%>

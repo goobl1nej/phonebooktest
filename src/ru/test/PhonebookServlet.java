@@ -5,6 +5,7 @@ import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.List;
+import java.util.function.LongToIntFunction;
 
 @WebServlet(name="phonebook", urlPatterns="/phonebook")
 public class PhonebookServlet extends HttpServlet{
@@ -43,9 +44,16 @@ public class PhonebookServlet extends HttpServlet{
                 }
             }
         }
-        if (req.getParameter("DelEmail")!=null){
+        if (req.getParameter("action")!=null && req.getParameter("action").equals("deleteEmail")){
             if (req.getParameter("emailID")!=null && !req.getParameter("emailID").isEmpty()){
-
+                if (req.getParameter("userID")!=null && !req.getParameter("userID").isEmpty()) {
+                    Long emailID = Long.parseLong(req.getParameter("emailID"));
+                    Long userID = Long.parseLong(req.getParameter("userID"));
+                    Crud.deleteEmail(emailID);
+                    User user = Crud.loadUserById(userID);
+                    req.setAttribute("user",user);
+                    req.getRequestDispatcher("/ViewUser.jsp").forward(req,resp);
+                }
             }
         }
         if (req.getParameter("AddPhone")!=null){
@@ -72,10 +80,32 @@ public class PhonebookServlet extends HttpServlet{
             }
         }
 
+        if (req.getParameter("action")!=null && req.getParameter("action").equals("deletePhone")){
+            if (req.getParameter("phoneID")!=null && !req.getParameter("phoneID").isEmpty()){
+                if (req.getParameter("userID")!=null && !req.getParameter("userID").isEmpty()) {
+                    Long phoneID = Long.parseLong(req.getParameter("phoneID"));
+                    Long userID = Long.parseLong(req.getParameter("userID"));
+                    Crud.deletePhone(phoneID);
+                    User user = Crud.loadUserById(userID);
+                    req.setAttribute("user",user);
+                    req.getRequestDispatcher("/ViewUser.jsp").forward(req,resp);
+                }
+            }
+        }
+
         if (req.getParameter("action")!=null && req.getParameter("action").equals("all") ){
             List<User> userList=Crud.loadAll();
             req.setAttribute("userList", userList);
             getServletContext().getRequestDispatcher("/AllUsersView.jsp").forward(req,resp);
+        }
+
+        if (req.getParameter("View")!=null){
+            if (req.getParameter("userID")!=null && !req.getParameter("userID").isEmpty()){
+                Long userID = (Long.parseLong(req.getParameter("userID")));
+                User user = Crud.loadUserById(userID);
+                req.setAttribute("user", user);
+                req.getRequestDispatcher("/ViewUser.jsp").forward(req, resp);
+            }
         }
 
         if (req.getParameter("action")!=null && req.getParameter("action").equals("view")){
@@ -92,8 +122,8 @@ public class PhonebookServlet extends HttpServlet{
             }
         }
 
-        if (req.getParameter("action")!=null && req.getParameter("action").equals("delete")){
-            if (req.getParameter("userID")!=null){
+        if (req.getParameter("action")!=null && req.getParameter("action").equals("deleteUser")){
+            if (req.getParameter("userID")!=null && !req.getParameter("userID").isEmpty()){
                 Long userID=(Long.parseLong(req.getParameter("userID")));
                 Crud.deleteUser(userID);
                 req.getRequestDispatcher("/phonebook?action=all").forward(req, resp);

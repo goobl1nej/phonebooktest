@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import static ru.test.UserDataChangeServlet.sdf;
+
 public class Crud {
 
     private Crud(){
@@ -110,7 +112,6 @@ public class Crud {
             usersPS=connectiondb.prepareStatement("SELECT * FROM user_ WHERE user_id=?");
             emailsOfUserPS=connectiondb.prepareStatement("SELECT * FROM email_ WHERE user_id=?");
             phonesOfUserPS=connectiondb.prepareStatement("SELECT * FROM phone_ WHERE user_id=?");
-
             usersPS.setLong(1,userID);
             ResultSet userset =usersPS.executeQuery();
             if(userset!=null) {
@@ -119,8 +120,9 @@ public class Crud {
                     String lastname = userset.getString("lastname");
                     String firstname = userset.getString("firstname");
                     String middlename = userset.getString("middlename");
-                    Date birthday = (userset.getDate("birthday"));
+                    java.util.Date birthday = (userset.getDate(("birthday")));
                     user=new User(id,firstname,lastname,middlename, birthday);
+                    user.getBirthday().getYear();
                     emailsOfUserPS.setLong(1, user.getId());
                     ResultSet emailsRS=emailsOfUserPS.executeQuery();
                     if(emailsRS!=null) {
@@ -144,7 +146,6 @@ public class Crud {
                         }
                         user.setPhones(phones);
                     }
-
                 }
             }
 
@@ -203,12 +204,16 @@ public class Crud {
             ResultSet s = usersPSId.executeQuery();
             if (s!=null && s.next()) {
                 long id = s.getLong("user_id");
-                emailsOfUserPS.setLong(1, id);
-                emailsOfUserPS.setString(2, user.getEmail());
-                emailsOfUserPS.execute();
-                phonesOfUserPS.setLong(1, id);
-                phonesOfUserPS.setString(2, user.getPhone());
-                phonesOfUserPS.execute();
+                if (user.getEmail()!=null && !user.getEmail().isEmpty()) {
+                    emailsOfUserPS.setLong(1, id);
+                    emailsOfUserPS.setString(2, user.getEmail());
+                    emailsOfUserPS.execute();
+                }
+                if (user.getPhone()!=null && !user.getPhone().isEmpty()) {
+                    phonesOfUserPS.setLong(1, id);
+                    phonesOfUserPS.setString(2, user.getPhone());
+                    phonesOfUserPS.execute();
+                }
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -274,6 +279,23 @@ public class Crud {
         }
     }
 
+    public static void deleteEmail(Long emailID) {
+        Connection connectiondb = null;
+        PreparedStatement emailPS = null;
+
+        try {
+            Class.forName("org.postgresql.Driver");
+            connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
+            emailPS = connectiondb.prepareStatement("DELETE FROM email_ WHERE email_id=?");
+            emailPS.setLong(1, emailID);
+            emailPS.execute();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void newPhone(Long userID, String phone){
         Connection connectiondb =null;
         PreparedStatement phonesOfUserPS=null;
@@ -310,53 +332,54 @@ public class Crud {
         }
     }
 
-//    public static void updateUser(Long userID, ru.test.User user){
-//        Connection connectiondb =null;
-//        PreparedStatement usersPS=null;
-//        PreparedStatement emailsOfUserPS=null;
-//        PreparedStatement phonesOfUserPS=null;
-//
-//        try {
-//            Class.forName("org.postgresql.Driver");
-//            connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
-//            usersPS=connectiondb.prepareStatement("ALTER * FROM user_ WHERE user_id=? "+"(lastname,firstname,middlename,birthday)"+"VALUES (?,?,?,?)");
-//            emailsOfUserPS=connectiondb.prepareStatement("ALTER * FROM email_ WHERE user_id=?"+"email"+"VALUES (?)");
-//            phonesOfUserPS=connectiondb.prepareStatement("ALTER * FROM phone_ WHERE user_id=?"+"phone"+"VALUES (?)");
-//            usersPS.setLong(1,userID);
-//            ResultSet userset =usersPS.executeQuery();
-//
-//
-//        } catch (ClassNotFoundException e) {
-//            e.printStackTrace();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }finally {
-//            if(phonesOfUserPS!=null) try {
-//                phonesOfUserPS.close();
-//            } catch (SQLException e) {
-//                e.printStackTrace();
-//            }
-//            if(emailsOfUserPS!=null) try {
-//                emailsOfUserPS.close();
-//            } catch (SQLException e) {
-//                e.printStackTrace();
-//            }
-//            if(usersPS!=null) try {
-//                usersPS.close();
-//            } catch (SQLException e) {
-//                e.printStackTrace();
-//            }
-//            if(connectiondb!=null) try {
-//                connectiondb.close();
-//            } catch (SQLException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//
-//
-//        return user;
-//    }
-//    }
+    public static void deletePhone(Long phoneID) {
+        Connection connectiondb = null;
+        PreparedStatement phonePS = null;
+
+        try {
+            Class.forName("org.postgresql.Driver");
+            connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
+            phonePS = connectiondb.prepareStatement("DELETE FROM phone_ WHERE phone_id=?");
+            phonePS.setLong(1,phoneID);
+            phonePS.execute();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void updateUser(Long userID, ru.test.User user){
+        Connection connectiondb =null;
+        PreparedStatement usersPS=null;
+
+        try {
+            Class.forName("org.postgresql.Driver");
+            connectiondb = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
+            usersPS=connectiondb.prepareStatement("UPDATE user_ SET lastname=?,firstname=?,middlename=?,birthday=? WHERE user_id=?");
+            usersPS.setString(1,user.getLastname());
+            usersPS.setString(2,user.getFirstname());
+            usersPS.setString(3,user.getMiddlename());
+            usersPS.setDate(4,(java.sql.Date) user.getBirthday());
+            usersPS.setLong(5,userID);
+            usersPS.execute();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            if(usersPS!=null) try {
+                usersPS.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            if(connectiondb!=null) try {
+                connectiondb.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
     public static void deleteUser(Long userID){
         Connection connectiondb =null;

@@ -13,16 +13,13 @@
   </head>
   <body>
   <form action="<c:url value="/phonebook"/>" method="POST">
-    <table>
+    <table align="center">
       <tr>
-        <td><a href="phonebook?action=add">Новый пользователь</a></td>
+        <td><a href="phonebook?action=all">Все контакты</a></td>
       </tr>
       <tr>
-        <td><a href="phonebook?action=all">Вывести список пользователей</a></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="userID" value="${userID}"></td>
-        <td><input type="submit" value="Посмотреть" name="View"/></td>
+        <td>Введите id контакта</td><td><input type="text" name="userID" value="${userID}"></td>
+        <td></td><td><input type="submit" value="Показать" name="View"/></td>
       </tr>
     </table>
   </form>

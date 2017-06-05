@@ -16,7 +16,7 @@
     <form action="<c:url value="/edit"/>" method="POST">
 
                 <input type="hidden" name="userID" value="${user.id}"/>
-                <table>
+                <table align="center">
                     <tr>
                         <td>Фамилия:</td><td><input type="text" name="lastName" value="${user.lastname}"/></td>
                     </tr>
@@ -27,24 +27,11 @@
                         <td>Отчество:</td><td><input type="text" name="middleName" value="${user.middlename}"/></td>
                     </tr>
                     <tr>
-                        <td>Дата рождения:</td><td><input type="text" name="birthday" value="${user.birthday}"/></td>
-                        <td><a href="phonebook?action=delete&userID=${user.id}">Удалить пользователя</a></td>
+                        <td>Дата рождения:</td>
+                        <td><div title="Введите дату в формате dd.MM.yyyy"><input type="text" pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}" name="birthday" value='<fmt:formatDate pattern = "dd.MM.yyyy" value = "${user.birthday}" />'/></div></td>
                     </tr>
-                    <%--<c:forEach var="email" items="${user.emails}">--%>
-                        <%--<tr>--%>
-                            <%--<td>Электронная почта:</td><td><input type="text" name="email" value="${email.email}"/></td>--%>
-                        <%--</tr>--%>
-                    <%--</c:forEach>--%>
-
-                    <%--<c:forEach var="phone" items="${user.phones}">--%>
-                        <%--<tr>--%>
-                            <%--<input type="hidden" name="count" value="${count}"/>--%>
-                            <%--<td>Телефон:</td><td><input type="text" name="phone" value="${phone.phone}"/></td>--%>
-                        <%--</tr>--%>
-                    <%--</c:forEach>--%>
-
                     <tr>
-                        <td><input type="submit" value="Сохранить" name="save"/></td>
+                        <td><input type="submit" value="Сохранить" name="editUser"/></td>
                     </tr>
                 </table>
 
